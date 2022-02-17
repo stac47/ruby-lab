@@ -5,6 +5,6 @@ setup() {
 }
 
 @test "should manipulate an array" {
-    run ruby "${ROSETTA_EXERCISE_DIR}/main.rb"
+    run ruby "${CURRENT_EXERCISE_DIR}/main.rb"
     assert_success
 }

@@ -5,7 +5,7 @@ setup() {
 }
 
 function test_sum() {
-    run ruby "${ROSETTA_EXERCISE_DIR}/sum.rb" <<< "$1"
+    run ruby "${CURRENT_EXERCISE_DIR}/sum.rb" <<< "$1"
     assert_success
     assert_output "$2"
 }
@@ -16,13 +16,13 @@ function test_sum() {
 }
 
 @test "should report error when there is not exactly 2 integers" {
-    run ruby "${ROSETTA_EXERCISE_DIR}/sum.rb" <<< "1 2 3"
+    run ruby "${CURRENT_EXERCISE_DIR}/sum.rb" <<< "1 2 3"
     assert_failure
     assert_output "Exactly two numbers are required"
-    run ruby "${ROSETTA_EXERCISE_DIR}/sum.rb" <<< ""
+    run ruby "${CURRENT_EXERCISE_DIR}/sum.rb" <<< ""
     assert_failure
     assert_output "Exactly two numbers are required"
-    run ruby "${ROSETTA_EXERCISE_DIR}/sum.rb" <<< "1"
+    run ruby "${CURRENT_EXERCISE_DIR}/sum.rb" <<< "1"
     assert_failure
     assert_output "Exactly two numbers are required"
 }

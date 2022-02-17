@@ -5,7 +5,7 @@ setup() {
 }
 
 @test "should detect a division by zero" {
-    run ruby "${ROSETTA_EXERCISE_DIR}/hello.rb"
+    run ruby "${CURRENT_EXERCISE_DIR}/hello.rb"
     assert_success
     assert_output "Hello World!"
 }

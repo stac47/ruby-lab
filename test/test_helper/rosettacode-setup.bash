@@ -1,4 +1,5 @@
 #!/usr/bin/env bash
 
-ROSETTA_EXERCISE_DIR="rosettacode/$(basename "${BATS_TEST_FILENAME%.bats}")"
-export ROSETTA_EXERCISE_DIR
+EXERCISES_DIR="exercises"
+CURRENT_EXERCISE_DIR="${EXERCISES_DIR}/$(basename "${BATS_TEST_FILENAME%.bats}")"
+export CURRENT_EXERCISE_DIR
