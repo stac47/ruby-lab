@@ -12,3 +12,7 @@ BATS := $(TEST_DIR)/bats/bin/bats
 .PHONY: test
 test:
 	$(BATS) --formatter tap13 "$(TEST_DIR)"
+
+.PHONY: executable
+executable:
+	find . -name '*.rb' -not -perm 0755 -exec chmod 0755 {} \;
