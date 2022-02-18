@@ -11,4 +11,4 @@ BATS := $(TEST_DIR)/bats/bin/bats
 
 .PHONY: test
 test:
-	$(BATS) "$(TEST_DIR)"
+	$(BATS) --formatter tap13 "$(TEST_DIR)"

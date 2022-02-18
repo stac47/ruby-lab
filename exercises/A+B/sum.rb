@@ -1,9 +1,10 @@
 #!/usr/bin/env ruby
+# frozen_string_literal: true
 
 input = gets
 numbers = input.split
 if numbers.length != 2
-  puts "Exactly two numbers are required"
+  puts 'Exactly two numbers are required'
   exit 1
 end
 sum = 0

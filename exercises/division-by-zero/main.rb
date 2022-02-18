@@ -1,7 +1,9 @@
 #!/usr/bin/env ruby
+# vi: set fileencoding=utf-8 :
+# frozen_string_literal: true
 
 begin
   42 / 0
-rescue ZeroDivisionError =>exc
-  puts "#{exc.class}:#{exc.message}"
+rescue ZeroDivisionError => e
+  puts "#{e.class}:#{e.message}"
 end

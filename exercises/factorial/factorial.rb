@@ -1,16 +1,18 @@
 #!/usr/bin/env ruby
 # vi: set fileencoding=utf-8 :
+# frozen_string_literal: true
 
-def factorial(n)
-  raise ArgumentError, "input must be positive, got '#{n}'" if n < 0
-  return 1 if n.between?(0,1)
-  n * factorial(n-1)
+def factorial(num)
+  raise ArgumentError, "input must be positive, got '#{num}'" if num.negative?
+  return 1 if num.between?(0, 1)
+
+  num * factorial(num - 1)
 end
 
-n = gets().to_i
+n = gets.to_i
 begin
   puts factorial(n)
-rescue
-  puts "Negative argument provided"
+rescue ArgumentError
+  puts 'Negative argument provided'
   exit 1
 end
