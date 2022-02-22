@@ -4,6 +4,18 @@ setup() {
     load 'test_helper/common-setup'
 }
 
+@test "should find nothing on an empty input" {
+    run ruby "${CURRENT_EXERCISE_DIR}/main.rb" <<< ""
+    assert_success
+    assert_output ""
+}
+
+@test "should find nothing when there are no anagrams" {
+    run ruby "${CURRENT_EXERCISE_DIR}/main.rb" <<< "no anagrams in here"
+    assert_success
+    assert_output ""
+}
+
 @test "should find all the anagrams in a sentence" {
     run ruby "${CURRENT_EXERCISE_DIR}/main.rb" <<EOF
 below the car is a rat drinking cider and bending its elbow while this thing is

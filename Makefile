@@ -11,7 +11,7 @@ BATS := $(TEST_DIR)/bats/bin/bats
 
 .PHONY: test
 test:
-	$(BATS) --formatter tap13 "$(TEST_DIR)"
+	$(BATS) --formatter pretty --timing -j 8 "$(TEST_DIR)"
 
 .PHONY: executable
 executable:
