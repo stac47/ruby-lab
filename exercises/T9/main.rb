@@ -37,7 +37,7 @@ class T9
       choices.each do |key, value|
         best_choice = [key, value] if value > best_choice[1]
       end
-      puts(best_choice[0].size.positive? ? best_choice[0][0, index + 1] : T9::MANUALLY)
+      puts(best_choice[0].size.positive? ? best_choice[0][0, index + 1] : MANUALLY)
     end
     # New line between each input
     puts
